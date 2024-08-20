@@ -30,6 +30,7 @@ repos:
   - repo: https://github.com/golangci/golangci-lint
     rev: v1.59.1
     hooks:
+      - id: golangci-lint
       - id: golangci-lint-full
         args: [--timeout=5m]
   - repo: local
@@ -50,3 +51,15 @@ repos:
         entry: sh -c 'cd ui && npm run format'
         language: system
         files: \.(js|ts|svelte|css|postcss|scss|json|md)$
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.16.3
+    hooks:
+      - id: gitleaks
+  - repo: https://github.com/jumanjihouse/pre-commit-hooks
+    rev: 3.0.0
+    hooks:
+      - id: shellcheck
+  - repo: https://github.com/pre-commit/mirrors-eslint
+    rev: v8.38.0
+    hooks:
+      - id: eslint

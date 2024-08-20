@@ -1,4 +1,4 @@
-FROM cgr.dev/chainguard/static:latest
+FROM cgr.dev/chainguard/static:latest@sha256:791657dd88dea8c1f9d3779815429f9c681a9a2778fc66dac3fbf550e1f1d9c8
 
 # grab auto platform arg
 ARG TARGETARCH
